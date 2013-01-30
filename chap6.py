@@ -36,7 +36,7 @@ def is_palindrome(string):
 
 # This function finds the greatest common denominator of two integers.
 # It should, but will not work for decimals in python.  It is likely that the decimal
-# module is required to fix this.  Ex. 1.0 % 2 gives the result 0.2.  However, 1.6 % 2
+# module is required to fix this.  Ex. 1.0 % 0.2 gives the result 0.2.  However, 1.6 % 0.2
 # gives the result 0.
 def gcd(a, b):
 	if a != 0 and b != 0:
@@ -49,3 +49,6 @@ def gcd(a, b):
 			print "The greatest common denominator is " + str(abs(b))
 	else:
 		print "Cannot find the gcd of 0!"
+
+
+
