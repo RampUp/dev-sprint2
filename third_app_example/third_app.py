@@ -10,7 +10,7 @@ users = {'juliana':'bacon'}
 class Main(flask.views.MethodView):
     def get(self):
         return flask.render_template('index.html')
-    
+
     def post(self):
         if 'logout' in flask.request.form:
             flask.session.pop('username', None)
@@ -42,7 +42,7 @@ class Remote(flask.views.MethodView):
     @login_required
     def get(self):
         return flask.render_template('remote.html')
-        
+
     @login_required
     def post(self):
         result = eval(flask.request.form['expression'])
@@ -54,7 +54,7 @@ class Music(flask.views.MethodView):
     def get(self):
         songs = os.listdir('static/music')
         return flask.render_template("music.html", songs=songs)
-    
+
 app.add_url_rule('/',
                  view_func=Main.as_view('index'),
                  methods=["GET", "POST"])
