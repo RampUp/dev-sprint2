@@ -5,7 +5,7 @@
     <audio controls="controls" autoplay="autoplay"></audio>
     <ul>
         {% for song in songs %}
-        <li><a onclick="changTrack('{{song}}')" href= "javascript:void(0);">{{song}}</a></li>
+        <li><a onclick="changeTrack('{{song}}')" href= "javascript:void(0);">{{song}}</a></li>
         {% endfor %}
     </ul>
 
@@ -21,7 +21,7 @@
     {% endwith %}
     <script type="text/javascript">
         function changeTrack(song){
-            $('audio').attr('src', '/static/music' + song);
+            $('audio').attr('src', '/static/music/' + song);
         }
     </script>
 {% endblock %}
