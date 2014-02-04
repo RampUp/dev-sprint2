@@ -1,2 +1,6 @@
 # Please put answers for the week2 stand alone questions here
-# Name:
+# Name: Christopher Van Schyndel
+
+An app that remotely runs an emulator and plays SNES games.
+An app that keeps a database of costs and flavor profiles of different coffees, as well as various other information/pictures.
+An app that runs a python coded game inside of the browser.
